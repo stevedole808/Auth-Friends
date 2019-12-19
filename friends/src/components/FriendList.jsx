@@ -23,7 +23,9 @@ class FriendList extends React.Component {
       .catch(err => console.log(err));
   };
 
-  render() { 
+  friends = this;
+
+  render() {
     return (
       <div>
         <h1>This is my Friendlist</h1>
@@ -33,7 +35,10 @@ class FriendList extends React.Component {
           </p>
         ))}
         <h1>Add A Friend! 😃</h1>
-        <FriendForm friendsList={this.state.friendsList}/>
+        <FriendForm
+          friendsList={this.state.friendsList}
+          parent={this.friends}
+        />
       </div>
     );
   }

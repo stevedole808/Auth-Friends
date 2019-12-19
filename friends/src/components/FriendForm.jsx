@@ -23,7 +23,7 @@ class Friend extends React.Component {
     e.preventDefault();
     axiosWithAuth()
       .post("/friends", this.state.credentials)
-      .then(res => ({friendList: res.data}))
+      .then(res => (this.props.parent.setState({friendsList: res.data})))
       .catch(err => console.log(err));
   };
 
