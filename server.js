@@ -11,39 +11,39 @@ let nextId = 7;
 let friends = [
   {
     id: 1,
-    name: 'Rachel Green',
+    name: 'Ben',
     age: 30,
-    email: 'rachel@friends.com'
+    email: 'ben@lambdaschool.com'
   },
   {
     id: 2,
-    name: 'Joey Tribbiani',
-    age: 34,
-    email: 'joey@friends.com'
+    name: 'Austen',
+    age: 45,
+    email: 'austen@lambdaschool.com'
   },
   {
     id: 3,
-    name: 'Chandler Bing',
-    age: 32,
-    email: 'chandler@friends.com'
+    name: 'Ryan',
+    age: 15,
+    email: 'ryan@lambdaschool.com'
   },
   {
     id: 4,
-    name: 'Ross Geller',
-    age: 32,
-    email: 'ross@friends.com'
+    name: 'Dustin',
+    age: 25,
+    email: 'D-munny@lambdaschool.com'
   },
   {
     id: 5,
-    name: 'Monica Bing',
-    age: 31,
-    email: 'monica@friends.com'
+    name: 'Sean',
+    age: 35,
+    email: 'sean@lambdaschool.com'
   },
   {
     id: 6,
-    name: 'Phoebe Buffay-Hannigan',
-    age: 30,
-    email: 'phoebe@friends.com'
+    name: 'Michelle',
+    age: 67,
+    email: 'michelle@gmail.com'
   }
 ];
 
@@ -62,7 +62,7 @@ function authenticator(req, res, next) {
 
 app.post('/api/login', (req, res) => {
   const { username, password } = req.body;
-  if (username === 'Lambda School' && password === 'i<3Lambd4') {
+  if (username === '1' && password === '1') {
     req.loggedIn = true;
     res.status(200).json({
       payload: token
